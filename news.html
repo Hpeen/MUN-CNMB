@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | MUN: CNMB</title>
+  <meta name="description" content="Anunțuri, realizări și povești din culisele MUN: CNMB.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">UN</span>
+        <span class="logo-text">MUN: CNMB <small>Râmnicu Vâlcea</small></span>
+      </a>
+      <nav class="nav-main" aria-label="Navigație principală">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="team.html">Our Team</a>
+        <a href="news.html">News</a>
+        <a href="documents.html">Documents</a>
+        <a href="inscrieri.html">Înscrieri</a>
+      </nav>
+      <div class="lang-switch">
+        <a href="news.html" class="active">RO</a>
+        <span>|</span>
+        <a href="en/news.html">EN</a>
+      </div>
+      <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <section class="hero hero-xs">
+    <div class="hero-content">
+      <h1>News</h1>
+      <p class="subtitle">Anunțuri, realizări și povești din culisele MUN: CNMB.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="news-filters">
+        <button class="filter-btn active" data-filter="all">Toate</button>
+        <button class="filter-btn" data-filter="anunturi">Anunțuri</button>
+        <button class="filter-btn" data-filter="conferinte">Conferințe</button>
+        <button class="filter-btn" data-filter="realizari">Realizări</button>
+        <button class="filter-btn" data-filter="behind-the-scenes">Behind the Scenes</button>
+      </div>
+
+      <div class="news-grid">
+
+        <article class="news-card" data-category="anunturi">
+          <a href="news/bine-ati-venit.html" class="news-thumb">📢</a>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-category">Anunțuri</span>
+              <span>16 mai 2026</span>
+            </div>
+            <h3><a href="news/bine-ati-venit.html">Bine ați venit pe site-ul oficial MUN: CNMB</a></h3>
+            <p>Lansăm oficial site-ul clubului — un spațiu unde vei găsi tot ce ține de activitățile, echipa și conferințele MUN: CNMB.</p>
+          </div>
+        </article>
+
+        <!-- Placeholder cards (Press înlocuiește pe măsură ce publică) -->
+        <article class="news-card" data-category="conferinte" style="opacity: 0.5;">
+          <div class="news-thumb">🌍</div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-category">Conferințe</span>
+              <span>În curând</span>
+            </div>
+            <h3>Următoarele conferințe vor fi anunțate aici</h3>
+            <p>Press va publica recapitulări de la fiecare conferință la care participăm sau pe care o organizăm.</p>
+          </div>
+        </article>
+
+        <article class="news-card" data-category="realizari" style="opacity: 0.5;">
+          <div class="news-thumb">🏆</div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-category">Realizări</span>
+              <span>În curând</span>
+            </div>
+            <h3>Premiile și realizările vor fi sărbătorite aici</h3>
+            <p>Pe măsură ce membrii noștri câștigă premii la conferințe, le vom prezenta aici.</p>
+          </div>
+        </article>
+
+        <article class="news-card" data-category="behind-the-scenes" style="opacity: 0.5;">
+          <div class="news-thumb">🎬</div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-category">Behind the Scenes</span>
+              <span>În curând</span>
+            </div>
+            <h3>Povești din culisele clubului</h3>
+            <p>Pregătiri, repetiții, momente amuzante, prietenii — tot ce nu se vede din afară.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="text-center mt-3" style="color: var(--gray); font-style: italic;">
+        Articolele marcate cu opacitate redusă sunt placeholder-uri — vor fi înlocuite de Department of Press pe măsură ce publică conținut real.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="logo">
+            <span class="logo-mark" style="background:rgba(255,255,255,0.15);">UN</span>
+            <span class="logo-text" style="color:#fff;">MUN: CNMB</span>
+          </div>
+          <p class="footer-tagline">"Lead the way to Tomorrow!"</p>
+          <small>Colegiul Național "Mircea cel Bătrân"<br>Râmnicu Vâlcea, jud. Vâlcea, România</small>
+        </div>
+        <div class="footer-col">
+          <h6>Quick Links</h6>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="inscrieri.html">Înscrieri</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <ul>
+            <li><a href="mailto:contact@muncnmb.com">contact@muncnmb.com</a></li>
+            <li><a href="mailto:secpress@muncnmb.com">secpress@muncnmb.com</a><span class="footer-email-secondary">Press</span></li>
+            <li><a href="mailto:president@muncnmb.com">president@muncnmb.com</a></li>
+            <li><a href="mailto:vicepresident@muncnmb.com">vicepresident@muncnmb.com</a></li>
+            <li><a href="mailto:secgeneral@muncnmb.com">secgeneral@muncnmb.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Follow Us</h6>
+          <div class="footer-social">
+            <a href="https://instagram.com/muncnmbvl_official" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+            <a href="https://x.com/muncnmbvl_official" aria-label="X (Twitter)" target="_blank" rel="noopener">𝕏</a>
+            <a href="https://facebook.com/muncnmbvl_official" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+            <a href="https://threads.net/@muncnmbvl_official" aria-label="Threads" target="_blank" rel="noopener">@</a>
+          </div>
+          <small>@muncnmbvl_official</small>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 MUN: CNMB. All rights reserved.</span>
+        <a href="privacy.html">Politică de Confidențialitate</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner">
+    <span>Folosim cookies pentru a îmbunătăți experiența ta pe site. <a href="privacy.html">Află mai multe</a></span>
+    <button class="accept-btn">Accept</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

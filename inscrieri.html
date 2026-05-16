@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Înscrieri | MUN: CNMB</title>
+  <meta name="description" content="Alătură-te MUN: CNMB sau aplică pentru evenimentele noastre — formulare deschise.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">UN</span>
+        <span class="logo-text">MUN: CNMB <small>Râmnicu Vâlcea</small></span>
+      </a>
+      <nav class="nav-main" aria-label="Navigație principală">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="team.html">Our Team</a>
+        <a href="news.html">News</a>
+        <a href="documents.html">Documents</a>
+        <a href="inscrieri.html">Înscrieri</a>
+      </nav>
+      <div class="lang-switch">
+        <a href="inscrieri.html" class="active">RO</a>
+        <span>|</span>
+        <a href="en/inscrieri.html">EN</a>
+      </div>
+      <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <section class="hero hero-xs">
+    <div class="hero-content">
+      <h1>Înscrieri</h1>
+      <p class="subtitle">Alătură-te clubului sau participă la evenimentele noastre.</p>
+    </div>
+  </section>
+
+  <!-- ACTIVITĂȚI DESCHISE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Activități deschise pentru înscriere</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="activity-card">
+          <div class="activity-icon">🎓</div>
+          <span class="activity-deadline">📅 Deadline: A se completa</span>
+          <h3>Membership 2026</h3>
+          <p>Devino membru activ al MUN: CNMB. Participă la workshopuri, conferințe și viața clubului — primul club Model UN din județul Vâlcea.</p>
+          <a href="#form-membership" class="btn btn-primary">Aplică acum →</a>
+        </div>
+
+        <div class="activity-card" style="background: var(--light); border-style: dashed;">
+          <div class="activity-icon" style="background: rgba(0,0,0,0.05); color: var(--gray-light);">⏳</div>
+          <h3 style="color: var(--gray);">Următoarele evenimente</h3>
+          <p>Conferințe, workshopuri și activități viitoare vor fi anunțate aici. Urmărește-ne pe Instagram pentru notificări în timp real.</p>
+          <a href="https://instagram.com/muncnmbvl_official" target="_blank" rel="noopener" class="btn btn-outline-blue">Mergi pe Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAR MEMBERSHIP -->
+  <section id="form-membership" class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Formular Membership 2026</h2>
+        <p>Completează formularul de mai jos. Te contactăm prin email în maxim 7 zile.</p>
+      </div>
+
+      <!-- Setup Formspree:
+           1. Creează cont gratuit la formspree.io (folosește president@muncnmb.com)
+           2. Creează un Form nou și copiază ID-ul (ex. xrgvznpd)
+           3. Înlocuiește action="#" cu action="https://formspree.io/f/YOUR_FORM_ID"
+           Până atunci, submit-ul deschide aplicația de email cu datele pre-populate (fallback). -->
+
+      <form class="form" data-form="Membership 2026" action="#" method="POST"
+            data-success="Mulțumim! Aplicația ta a fost primită. Te vom contacta în maxim 7 zile."
+            data-error="A apărut o eroare. Te rugăm să încerci din nou sau să ne scrii direct la president@muncnmb.com."
+            data-success-mailto="Se deschide aplicația ta de email pentru trimiterea aplicației. Dacă nu se deschide, copiază datele și trimite-le la president@muncnmb.com.">
+
+        <div class="form-status" role="status" aria-live="polite"></div>
+
+        <div class="form-group">
+          <label class="form-label" for="nume">Nume complet <span class="required">*</span></label>
+          <input class="form-input" type="text" id="nume" name="nume" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email <span class="required">*</span></label>
+          <input class="form-input" type="email" id="email" name="email" required>
+          <p class="form-hint">Vom folosi acest email pentru toată comunicarea cu tine.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="telefon">Telefon</label>
+          <input class="form-input" type="tel" id="telefon" name="telefon">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="clasa">Clasa și profilul <span class="required">*</span></label>
+          <input class="form-input" type="text" id="clasa" name="clasa" placeholder="ex. 11 Mate-Info" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="motivatie">De ce vrei să te alături MUN: CNMB? <span class="required">*</span></label>
+          <textarea class="form-textarea" id="motivatie" name="motivatie" rows="4" maxlength="500" required></textarea>
+          <p class="form-hint">Maxim 500 caractere.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="experienta">Experiență MUN anterioară</label>
+          <textarea class="form-textarea" id="experienta" name="experienta" rows="3" placeholder="Conferințe la care ai participat, cluburi de dezbatere, etc. (opțional)"></textarea>
+        </div>
+
+        <div class="form-group">
+          <span class="form-label">Limbi vorbite</span>
+          <div class="form-checkbox-group">
+            <label class="form-check"><input type="checkbox" name="limbi" value="Romana" checked> Română</label>
+            <label class="form-check"><input type="checkbox" name="limbi" value="Engleza"> Engleză</label>
+            <label class="form-check"><input type="checkbox" name="limbi" value="Franceza"> Franceză</label>
+            <label class="form-check"><input type="checkbox" name="limbi" value="Germana"> Germană</label>
+            <label class="form-check"><input type="checkbox" name="limbi" value="Alta"> Alta</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <span class="form-label">Disponibilitate săptămânală <span class="required">*</span></span>
+          <div class="form-radio-group">
+            <label class="form-check"><input type="radio" name="disponibilitate" value="2-3 ore/saptamana" required> 2-3 ore pe săptămână</label>
+            <label class="form-check"><input type="radio" name="disponibilitate" value="4-6 ore/saptamana"> 4-6 ore pe săptămână</label>
+            <label class="form-check"><input type="radio" name="disponibilitate" value="7+ ore/saptamana"> 7+ ore pe săptămână</label>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <div class="form-group">
+          <label class="form-check">
+            <input type="checkbox" name="gdpr" value="da" required>
+            <span><span class="required">*</span> Sunt de acord cu prelucrarea datelor mele personale conform <a href="privacy.html" target="_blank">Politicii de Confidențialitate</a>.</span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="form-check">
+            <input type="checkbox" name="acord_parental" value="da">
+            <span>Sunt minor sub 16 ani și am acordul părintelui/tutorelui legal pentru această aplicație.</span>
+          </label>
+          <p class="form-hint">Bifează doar dacă ai sub 16 ani. Vom contacta și părintele înainte de a te înrola oficial.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit"
+                data-label="Trimite aplicația"
+                data-sending="Se trimite…">
+          Trimite aplicația
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Întrebări frecvente</h2>
+      </div>
+
+      <div class="accordion faq-list">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Cine se poate înscrie?</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Orice elev al Colegiului Național "Mircea cel Bătrân", indiferent de profil sau an de studiu. Pentru evenimente externe (conferințe județene), putem accepta și delegați din alte școli — vom anunța separat când e cazul.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Există taxă de membership?</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Membership-ul de bază este gratuit. Pentru participarea la conferințe externe pot exista taxe de înscriere (acoperite de fiecare delegat). Pentru conferințele organizate de noi, vom comunica taxa în anunțul oficial al conferinței.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Ce se întâmplă după ce aplic?</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Aplicația ta este evaluată de Executive Team. În maxim 7 zile primești un email cu rezultatul. Dacă ești selectat, vei fi invitat la o primă întâlnire de onboarding unde îți prezentăm structura clubului și următoarele activități.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Cât timp îmi va lua?</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Activitățile regulate ale clubului ocupă în medie 3-5 ore pe săptămână (workshopuri, training-uri, ședințe). În perioadele de conferință (pregătire intensivă sau participare efectivă) timpul poate crește la 8-12 ore săptămânal pentru câteva săptămâni.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Trebuie să știu engleză?</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Pentru activitățile interne și conferințele locale, româna este suficientă. Pentru conferințele internaționale (sau pentru a citi documente oficiale ONU) ai nevoie de engleză la nivel mediu-avansat. Clubul oferă și workshopuri de public speaking în engleză pentru cei care vor să se pregătească.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="logo">
+            <span class="logo-mark" style="background:rgba(255,255,255,0.15);">UN</span>
+            <span class="logo-text" style="color:#fff;">MUN: CNMB</span>
+          </div>
+          <p class="footer-tagline">"Lead the way to Tomorrow!"</p>
+          <small>Colegiul Național "Mircea cel Bătrân"<br>Râmnicu Vâlcea, jud. Vâlcea, România</small>
+        </div>
+        <div class="footer-col">
+          <h6>Quick Links</h6>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="inscrieri.html">Înscrieri</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <ul>
+            <li><a href="mailto:contact@muncnmb.com">contact@muncnmb.com</a></li>
+            <li><a href="mailto:secpress@muncnmb.com">secpress@muncnmb.com</a><span class="footer-email-secondary">Press</span></li>
+            <li><a href="mailto:president@muncnmb.com">president@muncnmb.com</a></li>
+            <li><a href="mailto:vicepresident@muncnmb.com">vicepresident@muncnmb.com</a></li>
+            <li><a href="mailto:secgeneral@muncnmb.com">secgeneral@muncnmb.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Follow Us</h6>
+          <div class="footer-social">
+            <a href="https://instagram.com/muncnmbvl_official" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+            <a href="https://x.com/muncnmbvl_official" aria-label="X (Twitter)" target="_blank" rel="noopener">𝕏</a>
+            <a href="https://facebook.com/muncnmbvl_official" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+            <a href="https://threads.net/@muncnmbvl_official" aria-label="Threads" target="_blank" rel="noopener">@</a>
+          </div>
+          <small>@muncnmbvl_official</small>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 MUN: CNMB. All rights reserved.</span>
+        <a href="privacy.html">Politică de Confidențialitate</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner">
+    <span>Folosim cookies pentru a îmbunătăți experiența ta pe site. <a href="privacy.html">Află mai multe</a></span>
+    <button class="accept-btn">Accept</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

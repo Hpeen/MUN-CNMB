@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply | MUN: CNMB</title>
+  <meta name="description" content="Join MUN: CNMB or apply for our events — open application forms.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">UN</span>
+        <span class="logo-text">MUN: CNMB <small>Râmnicu Vâlcea</small></span>
+      </a>
+      <nav class="nav-main" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="team.html">Our Team</a>
+        <a href="news.html">News</a>
+        <a href="documents.html">Documents</a>
+        <a href="inscrieri.html">Apply</a>
+      </nav>
+      <div class="lang-switch">
+        <a href="../inscrieri.html">RO</a>
+        <span>|</span>
+        <a href="inscrieri.html" class="active">EN</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <section class="hero hero-xs">
+    <div class="hero-content">
+      <h1>Apply</h1>
+      <p class="subtitle">Join the club or apply for our events.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><h2>Open applications</h2></div>
+
+      <div class="grid-2">
+        <div class="activity-card">
+          <div class="activity-icon">🎓</div>
+          <span class="activity-deadline">📅 Deadline: TBD</span>
+          <h3>Membership 2026</h3>
+          <p>Become an active member of MUN: CNMB. Participate in workshops, conferences, and club life — the first Model UN club in Vâlcea county.</p>
+          <a href="#form-membership" class="btn btn-primary">Apply now →</a>
+        </div>
+
+        <div class="activity-card" style="background: var(--light); border-style: dashed;">
+          <div class="activity-icon" style="background: rgba(0,0,0,0.05); color: var(--gray-light);">⏳</div>
+          <h3 style="color: var(--gray);">Upcoming events</h3>
+          <p>Future conferences, workshops, and activities will be announced here. Follow us on Instagram for real-time notifications.</p>
+          <a href="https://instagram.com/muncnmbvl_official" target="_blank" rel="noopener" class="btn btn-outline-blue">Go to Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="form-membership" class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Membership 2026 Form</h2>
+        <p>Fill out the form below. We'll contact you by email within 7 days.</p>
+      </div>
+
+      <form class="form" data-form="Membership 2026" action="#" method="POST"
+            data-success="Thank you! Your application has been received. We'll contact you within 7 days."
+            data-error="An error occurred. Please try again or write directly to president@muncnmb.com."
+            data-success-mailto="Your email app should open with the application details. If it doesn't, copy the data and send it to president@muncnmb.com.">
+
+        <div class="form-status" role="status" aria-live="polite"></div>
+
+        <div class="form-group">
+          <label class="form-label" for="nume">Full name <span class="required">*</span></label>
+          <input class="form-input" type="text" id="nume" name="full_name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email <span class="required">*</span></label>
+          <input class="form-input" type="email" id="email" name="email" required>
+          <p class="form-hint">We'll use this email for all communication with you.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="telefon">Phone</label>
+          <input class="form-input" type="tel" id="telefon" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="clasa">Class & profile <span class="required">*</span></label>
+          <input class="form-input" type="text" id="clasa" name="class_profile" placeholder="e.g. 11 Mathematics-CS" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="motivatie">Why do you want to join MUN: CNMB? <span class="required">*</span></label>
+          <textarea class="form-textarea" id="motivatie" name="motivation" rows="4" maxlength="500" required></textarea>
+          <p class="form-hint">Maximum 500 characters.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="experienta">Previous MUN experience</label>
+          <textarea class="form-textarea" id="experienta" name="experience" rows="3" placeholder="Conferences attended, debate clubs, etc. (optional)"></textarea>
+        </div>
+
+        <div class="form-group">
+          <span class="form-label">Languages spoken</span>
+          <div class="form-checkbox-group">
+            <label class="form-check"><input type="checkbox" name="languages" value="Romanian" checked> Romanian</label>
+            <label class="form-check"><input type="checkbox" name="languages" value="English"> English</label>
+            <label class="form-check"><input type="checkbox" name="languages" value="French"> French</label>
+            <label class="form-check"><input type="checkbox" name="languages" value="German"> German</label>
+            <label class="form-check"><input type="checkbox" name="languages" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <span class="form-label">Weekly availability <span class="required">*</span></span>
+          <div class="form-radio-group">
+            <label class="form-check"><input type="radio" name="availability" value="2-3 hours/week" required> 2-3 hours per week</label>
+            <label class="form-check"><input type="radio" name="availability" value="4-6 hours/week"> 4-6 hours per week</label>
+            <label class="form-check"><input type="radio" name="availability" value="7+ hours/week"> 7+ hours per week</label>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <div class="form-group">
+          <label class="form-check">
+            <input type="checkbox" name="gdpr" value="yes" required>
+            <span><span class="required">*</span> I agree to the processing of my personal data according to the <a href="privacy.html" target="_blank">Privacy Policy</a>.</span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="form-check">
+            <input type="checkbox" name="parental_consent" value="yes">
+            <span>I am a minor under 16 and I have my parent/legal guardian's consent for this application.</span>
+          </label>
+          <p class="form-hint">Check only if you're under 16. We'll also contact the parent before officially enrolling you.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit"
+                data-label="Submit application"
+                data-sending="Sending…">
+          Submit application
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><h2>Frequently Asked Questions</h2></div>
+
+      <div class="accordion faq-list">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false"><span>Who can apply?</span><span class="chevron">▾</span></button>
+          <div class="accordion-content"><div class="accordion-body">
+            <p>Any student of "Mircea cel Bătrân" National College, regardless of profile or year of study. For external events (county-level conferences), we may also accept delegates from other schools — we'll announce when applicable.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false"><span>Is there a membership fee?</span><span class="chevron">▾</span></button>
+          <div class="accordion-content"><div class="accordion-body">
+            <p>Basic membership is free. External conference participation may involve registration fees (covered by each delegate). For conferences we organize ourselves, the fee will be communicated in the official announcement.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false"><span>What happens after I apply?</span><span class="chevron">▾</span></button>
+          <div class="accordion-content"><div class="accordion-body">
+            <p>Your application is evaluated by the Executive Team. Within 7 days you'll receive an email with the result. If selected, you'll be invited to a first onboarding meeting where we present the club structure and upcoming activities.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false"><span>How much time will it take?</span><span class="chevron">▾</span></button>
+          <div class="accordion-content"><div class="accordion-body">
+            <p>Regular club activities take 3-5 hours per week on average (workshops, training sessions, meetings). During conference periods (intensive prep or participation), time can grow to 8-12 hours weekly for a few weeks.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false"><span>Do I need to know English?</span><span class="chevron">▾</span></button>
+          <div class="accordion-content"><div class="accordion-body">
+            <p>For internal activities and local conferences, Romanian is sufficient. For international conferences (or to read official UN documents), you need intermediate-to-advanced English. The club also offers English public speaking workshops for those who want to prepare.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="logo"><span class="logo-mark" style="background:rgba(255,255,255,0.15);">UN</span><span class="logo-text" style="color:#fff;">MUN: CNMB</span></div>
+          <p class="footer-tagline">"Lead the way to Tomorrow!"</p>
+          <small>"Mircea cel Bătrân" National College<br>Râmnicu Vâlcea, Vâlcea County, Romania</small>
+        </div>
+        <div class="footer-col">
+          <h6>Quick Links</h6>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="inscrieri.html">Apply</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <ul>
+            <li><a href="mailto:contact@muncnmb.com">contact@muncnmb.com</a></li>
+            <li><a href="mailto:secpress@muncnmb.com">secpress@muncnmb.com</a><span class="footer-email-secondary">Press</span></li>
+            <li><a href="mailto:president@muncnmb.com">president@muncnmb.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Follow Us</h6>
+          <div class="footer-social">
+            <a href="https://instagram.com/muncnmbvl_official" target="_blank" rel="noopener">IG</a>
+            <a href="https://x.com/muncnmbvl_official" target="_blank" rel="noopener">𝕏</a>
+            <a href="https://facebook.com/muncnmbvl_official" target="_blank" rel="noopener">f</a>
+            <a href="https://threads.net/@muncnmbvl_official" target="_blank" rel="noopener">@</a>
+          </div>
+          <small>@muncnmbvl_official</small>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 MUN: CNMB. All rights reserved.</span>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner">
+    <span>We use cookies to improve your experience. <a href="privacy.html">Learn more</a></span>
+    <button class="accept-btn">Accept</button>
+  </div>
+
+  <script src="../main.js"></script>
+</body>
+</html>
