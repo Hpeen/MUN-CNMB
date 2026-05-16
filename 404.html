@@ -4,27 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagină negăsită · 404 | MUN: CNMB</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <!-- 404 uses absolute paths with /MUN-CNMB/ prefix because GitHub Pages serves
+       it from /MUN-CNMB/ but the browser URL stays at the requested (missing) path.
+       When you set the custom domain, change every "/MUN-CNMB/" below to "/". -->
+  <link rel="icon" type="image/svg+xml" href="/MUN-CNMB/assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/MUN-CNMB/styles.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="logo">
+      <a href="/MUN-CNMB/" class="logo">
         <span class="logo-mark">UN</span>
         <span class="logo-text">MUN: CNMB <small>Râmnicu Vâlcea</small></span>
       </a>
       <nav class="nav-main" aria-label="Navigație principală">
-        <a href="/">Home</a>
-        <a href="/about.html">About Us</a>
-        <a href="/team.html">Our Team</a>
-        <a href="/news.html">News</a>
-        <a href="/documents.html">Documents</a>
-        <a href="/inscrieri.html">Înscrieri</a>
+        <a href="/MUN-CNMB/">Home</a>
+        <a href="/MUN-CNMB/about.html">About Us</a>
+        <a href="/MUN-CNMB/team.html">Our Team</a>
+        <a href="/MUN-CNMB/news.html">News</a>
+        <a href="/MUN-CNMB/documents.html">Documents</a>
+        <a href="/MUN-CNMB/inscrieri.html">Înscrieri</a>
       </nav>
       <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">☰</button>
     </div>
@@ -38,8 +41,8 @@
         Pagina pe care o cauți nu există sau a fost mutată. Verifică URL-ul sau întoarce-te la pagina principală.
       </p>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/" class="btn btn-primary">← Înapoi acasă</a>
-        <a href="/news.html" class="btn btn-outline-blue">Vezi News</a>
+        <a href="/MUN-CNMB/" class="btn btn-primary">← Înapoi acasă</a>
+        <a href="/MUN-CNMB/news.html" class="btn btn-outline-blue">Vezi News</a>
       </div>
     </div>
   </section>
@@ -58,11 +61,11 @@
         <div class="footer-col">
           <h6>Quick Links</h6>
           <ul>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/team.html">Team</a></li>
-            <li><a href="/news.html">News</a></li>
-            <li><a href="/documents.html">Documents</a></li>
-            <li><a href="/inscrieri.html">Înscrieri</a></li>
+            <li><a href="/MUN-CNMB/about.html">About</a></li>
+            <li><a href="/MUN-CNMB/team.html">Team</a></li>
+            <li><a href="/MUN-CNMB/news.html">News</a></li>
+            <li><a href="/MUN-CNMB/documents.html">Documents</a></li>
+            <li><a href="/MUN-CNMB/inscrieri.html">Înscrieri</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -82,11 +85,11 @@
       </div>
       <div class="container footer-bottom">
         <span>© 2026 MUN: CNMB. All rights reserved.</span>
-        <a href="/privacy.html">Politică de Confidențialitate</a>
+        <a href="/MUN-CNMB/privacy.html">Politică de Confidențialitate</a>
       </div>
     </div>
   </footer>
 
-  <script src="/main.js"></script>
+  <script src="/MUN-CNMB/main.js"></script>
 </body>
 </html>

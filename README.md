@@ -52,9 +52,11 @@ Site static (HTML/CSS/JS pur, fără build step) găzduit pe **GitHub Pages** la
 
 ## 🚀 Deployment pe GitHub Pages
 
-### Pașii (o singură dată)
+### Faza 1 — Live fără domeniu propriu (acum)
 
-1. **Push pe repo GitHub** (de exemplu `Hpeen/MUN-CNMB`):
+Site-ul rulează la `https://hpeen.github.io/MUN-CNMB/` imediat după:
+
+1. **Push pe repo GitHub**:
    ```bash
    git push -u origin main
    ```
@@ -63,28 +65,39 @@ Site static (HTML/CSS/JS pur, fără build step) găzduit pe **GitHub Pages** la
    - Mergi la `Settings` → `Pages` în repo
    - **Source:** Deploy from a branch
    - **Branch:** `main`, folder `/ (root)`
-   - Save
+   - Save → așteaptă ~1 minut
 
-3. **Conectează domeniul `muncnmbvl.com`**:
-   - În `Settings` → `Pages` → câmpul **Custom domain** introdu `www.muncnmbvl.com`
-   - Fișierul `CNAME` din repo conține deja `www.muncnmbvl.com`
-   - La registrarul de domeniu (de unde ai cumpărat domeniul), setează DNS:
-     ```
-     Type: CNAME
-     Name: www
-     Value: Hpeen.github.io
-     TTL: 3600
-     ```
-     Pentru root (`muncnmbvl.com` fără `www`), adaugă A records spre IP-urile GitHub:
-     ```
-     185.199.108.153
-     185.199.109.153
-     185.199.110.153
-     185.199.111.153
-     ```
-   - Propagarea DNS poate dura 24-48h
+Site-ul e live la `https://hpeen.github.io/MUN-CNMB/`.
 
-4. **Activează HTTPS**: După propagare, în `Settings` → `Pages` bifează **Enforce HTTPS**.
+### Faza 2 — Conectare domeniu `muncnmbvl.com` (când îl ai)
+
+Când cumperi domeniul:
+
+1. **Creează fișierul `CNAME` în root** cu conținutul:
+   ```
+   www.muncnmbvl.com
+   ```
+
+2. **Update 404.html**: înlocuiește toate `/MUN-CNMB/` cu `/` (vezi comentariul din `404.html`)
+
+3. **Update meta tags**: în `index.html`, `sitemap.xml` și `robots.txt` URL-urile `https://www.muncnmbvl.com/` sunt deja corecte.
+
+4. **GitHub Settings → Pages → Custom domain**: introdu `www.muncnmbvl.com` → Save
+
+5. **DNS la registrarul de domeniu** (de unde l-ai cumpărat):
+   ```
+   Type: CNAME    Name: www    Value: Hpeen.github.io    TTL: 3600
+   ```
+   Pentru root (`muncnmbvl.com` fără `www`), adaugă A records spre IP-urile GitHub Pages:
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+   Propagarea DNS poate dura 24-48h.
+
+6. **Enforce HTTPS**: după propagare, în `Settings` → `Pages` bifează **Enforce HTTPS**.
 
 ### După fiecare schimbare
 
