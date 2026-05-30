@@ -126,10 +126,11 @@
     const catLabel = CATEGORY_LABELS[lang][article.category] || article.category;
     const date = formatDate(article.publishedAt, lang);
     const url = `${articleBase}?slug=${encodeURIComponent(slug)}`;
+    const readMore = lang === 'en' ? 'Read more →' : 'Citește mai mult →';
 
     const thumb = article.imageUrl
-      ? `<a href="${url}" class="news-thumb" style="background-image:url('${article.imageUrl}?w=600&h=400&fit=crop');"></a>`
-      : `<a href="${url}" class="news-thumb">${escapeHtml(article.emoji || '📰')}</a>`;
+      ? `<a href="${url}" class="news-thumb news-thumb--image" aria-label="${escapeHtml(title)}"><img src="${article.imageUrl}?w=800&h=450&fit=crop&auto=format" alt="" loading="lazy"></a>`
+      : `<a href="${url}" class="news-thumb" aria-label="${escapeHtml(title)}">${escapeHtml(article.emoji || '📰')}</a>`;
 
     return `
       <article class="news-card" data-category="${escapeHtml(article.category)}">
@@ -141,6 +142,7 @@
           </div>
           <h3><a href="${url}">${escapeHtml(title)}</a></h3>
           <p>${escapeHtml(excerpt)}</p>
+          <a href="${url}" class="news-card-link">${readMore}</a>
         </div>
       </article>
     `;

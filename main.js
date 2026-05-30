@@ -35,16 +35,15 @@
     });
   });
 
-  // ---------- News filters ----------
+  // ---------- News filters (re-queries cards on each click for dynamic content) ----------
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const newsCards = document.querySelectorAll('.news-card[data-category]');
-  if (filterButtons.length && newsCards.length) {
+  if (filterButtons.length) {
     filterButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
         const filter = btn.dataset.filter;
         filterButtons.forEach(function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
-        newsCards.forEach(function (card) {
+        document.querySelectorAll('.news-card[data-category]').forEach(function (card) {
           card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
         });
       });

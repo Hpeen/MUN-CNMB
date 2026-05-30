@@ -6,7 +6,8 @@
       "Bash(gh run *)",
       "Bash(python3 *)",
       "Bash(npm --version)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(npx sanity *)"
     ]
   }
 }
