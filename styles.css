@@ -3,9 +3,9 @@
    ============================================ */
 
 :root {
-  --un-blue: #009EDB;
-  --un-blue-dark: #006FA6;
-  --un-blue-darker: #003F66;
+  --un-blue: #1462cc;
+  --un-blue-dark: #0b4591;
+  --un-blue-darker: #051650;
   --accent: #FFCC33;
   --dark: #1A1A1A;
   --gray: #4A5568;
@@ -111,7 +111,7 @@ img { max-width: 100%; height: auto; display: block; }
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--un-blue-darker) url('assets/logo.png') center/cover no-repeat;
+  background: #ffffff url('assets/logo.png') center/cover no-repeat;
   font-size: 0;
   color: transparent;
   flex-shrink: 0;
