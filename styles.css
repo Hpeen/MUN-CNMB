@@ -25,7 +25,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--dark);
@@ -34,7 +34,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'DM Serif Display', Georgia, serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--dark);
@@ -103,7 +103,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
   font-weight: 700;
   font-size: 1.125rem;
   color: var(--un-blue-darker);
@@ -133,7 +133,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .logo-text { line-height: 1.1; }
-.logo-text small { display: block; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 400; color: var(--gray); }
+.logo-text small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 400; color: var(--gray); }
 
 .nav-main {
   display: flex;
@@ -218,7 +218,7 @@ img { max-width: 100%; height: auto; display: block; }
 .btn {
   display: inline-block;
   padding: 0.875rem 1.75rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
   border-radius: 4px;
@@ -352,7 +352,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .hero h1 { color: var(--white); margin-bottom: 1rem; }
-.hero .subtitle { font-size: 1.25rem; opacity: 0.95; margin-bottom: 2.5rem; font-family: 'Inter', sans-serif; font-weight: 400; }
+.hero .subtitle { font-size: 1.25rem; opacity: 0.95; margin-bottom: 2.5rem; font-family: 'DM Sans', sans-serif; font-weight: 400; }
 .hero .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 .hero-sm {
@@ -457,7 +457,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .stat-number {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1;
@@ -539,7 +539,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: center;
   color: var(--white);
   font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
   overflow: hidden;
   position: relative;
 }
@@ -1007,7 +1007,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
   font-weight: 700;
   font-size: 1.125rem;
 }
@@ -1027,7 +1027,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .committee-card .acronym {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
   font-weight: 700;
   font-size: 1.375rem;
   color: var(--un-blue);
@@ -1084,7 +1084,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .footer-col h6 {
   color: var(--white);
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1103,7 +1103,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .footer-brand .footer-tagline {
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 1.0625rem;
   margin: 0.75rem 0 0.5rem;
   color: var(--accent);
