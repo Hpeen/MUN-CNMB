@@ -166,8 +166,11 @@
     const imgSrc = article.imageUrl
       ? buildImageUrl(article.imageUrl, { w: 900, fit: 'max' })
       : '';
+    const blurSrc = article.imageUrl
+      ? buildImageUrl(article.imageUrl, { w: 60, fit: 'max' })
+      : '';
     const thumb = imgSrc
-      ? `<a href="${url}" class="news-thumb news-thumb--image" aria-label="${escapeHtml(title)}"><img src="${imgSrc}" alt="" loading="lazy"></a>`
+      ? `<a href="${url}" class="news-thumb news-thumb--image" aria-label="${escapeHtml(title)}" style="--blur-bg:url('${blurSrc}');"><img src="${imgSrc}" alt="" loading="lazy"></a>`
       : `<a href="${url}" class="news-thumb" aria-label="${escapeHtml(title)}">${escapeHtml(article.emoji || '📰')}</a>`;
 
     return `
