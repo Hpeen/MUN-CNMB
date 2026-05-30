@@ -103,40 +103,8 @@
         <h2>Latest News</h2>
         <a href="news.html" class="btn-text">See all →</a>
       </div>
-      <div class="news-grid">
-        <article class="news-card">
-          <a href="news/welcome.html" class="news-thumb">📢</a>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Announcements</span>
-              <span>May 16, 2026</span>
-            </div>
-            <h3><a href="news/welcome.html">Welcome to the official MUN: CNMB website</a></h3>
-            <p>We're officially launching the club website, a space where you'll find everything about the activities, team, and conferences of MUN: CNMB.</p>
-          </div>
-        </article>
-        <article class="news-card">
-          <div class="news-thumb">🌍</div>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Announcements</span>
-              <span>Coming soon</span>
-            </div>
-            <h3><a href="news.html">Upcoming events will be announced here</a></h3>
-            <p>Follow us for updates on workshops, training sessions, and conferences.</p>
-          </div>
-        </article>
-        <article class="news-card">
-          <div class="news-thumb">🤝</div>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Community</span>
-              <span>Coming soon</span>
-            </div>
-            <h3><a href="news.html">Stories from behind the scenes of MUN: CNMB</a></h3>
-            <p>The Press team will regularly publish stories and behind-the-scenes content from club life.</p>
-          </div>
-        </article>
+      <div class="news-grid" id="home-news-list">
+        <p class="text-center" style="color: var(--gray); grid-column: 1 / -1;">Loading…</p>
       </div>
     </div>
   </section>
@@ -251,5 +219,23 @@
   </footer>
 
   <script src="../main.js"></script>
+  <script src="../sanity.js"></script>
+  <script>
+    (async function () {
+      const list = document.getElementById('home-news-list');
+      if (!list) return;
+      try {
+        const articles = (await MuncnmbSanity.getArticles()).slice(0, 3);
+        if (!articles.length) {
+          list.innerHTML = '<p class="text-center" style="color: var(--gray); grid-column: 1 / -1;">No articles published yet.</p>';
+          return;
+        }
+        list.innerHTML = articles.map(a => MuncnmbSanity.renderCard(a, 'en', 'news/article.html')).join('');
+      } catch (err) {
+        console.error(err);
+        list.innerHTML = '';
+      }
+    })();
+  </script>
 </body>
 </html>

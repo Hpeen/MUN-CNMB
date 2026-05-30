@@ -58,12 +58,4 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.muncnmbvl.com/en/privacy.html"/>
   </url>
 
-  <url>
-    <loc>https://www.muncnmbvl.com/news/bine-ati-venit.html</loc>
-    <lastmod>2026-05-16</lastmod>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://www.muncnmbvl.com/news/bine-ati-venit.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.muncnmbvl.com/en/news/welcome.html"/>
-  </url>
-
 </urlset>

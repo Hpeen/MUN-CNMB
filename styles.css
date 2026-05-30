@@ -576,6 +576,27 @@ img { max-width: 100%; height: auto; display: block; }
   background: linear-gradient(135deg, var(--un-blue) 0%, var(--un-blue-darker) 100%);
   border-radius: 8px;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.article-cover-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.article-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  display: block;
 }
 
 .article-content { font-size: 1.0625rem; line-height: 1.75; color: var(--dark); }

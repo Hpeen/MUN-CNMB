@@ -48,83 +48,42 @@
 
       <div class="news-filters">
         <button class="filter-btn active" data-filter="all">Toate</button>
-        <button class="filter-btn" data-filter="anunturi">Anunțuri</button>
-        <button class="filter-btn" data-filter="conferinte">Conferințe</button>
-        <button class="filter-btn" data-filter="realizari">Realizări</button>
+        <button class="filter-btn" data-filter="announcements">Anunțuri</button>
+        <button class="filter-btn" data-filter="conferences">Conferințe</button>
+        <button class="filter-btn" data-filter="achievements">Realizări</button>
         <button class="filter-btn" data-filter="behind-the-scenes">Behind the Scenes</button>
       </div>
 
-      <div class="news-grid">
-
-        <article class="news-card" data-category="anunturi">
-          <a href="news/bine-ati-venit.html" class="news-thumb">📢</a>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Anunțuri</span>
-              <span>16 mai 2026</span>
-            </div>
-            <h3><a href="news/bine-ati-venit.html">Bine ați venit pe site-ul oficial MUN: CNMB</a></h3>
-            <p>Lansăm oficial site-ul clubului, un spațiu unde vei găsi tot ce ține de activitățile, echipa și conferințele MUN: CNMB.</p>
-          </div>
-        </article>
-
-        <article class="news-card" data-category="anunturi" style="opacity: 0.5;">
-          <div class="news-thumb">⏳</div>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Anunțuri</span>
-              <span>În curând</span>
-            </div>
-            <h3>Următoarele evenimente</h3>
-            <p>Conferințe, workshopuri și activități viitoare vor fi anunțate aici. Urmărește-ne pe Instagram pentru notificări în timp real.</p>
-          </div>
-        </article>
-
-        <!-- Placeholder cards (Press înlocuiește pe măsură ce publică) -->
-        <article class="news-card" data-category="conferinte" style="opacity: 0.5;">
-          <div class="news-thumb">🌍</div>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Conferințe</span>
-              <span>În curând</span>
-            </div>
-            <h3>Următoarele conferințe vor fi anunțate aici</h3>
-            <p>Press va publica recapitulări de la fiecare conferință la care participăm sau pe care o organizăm.</p>
-          </div>
-        </article>
-
-        <article class="news-card" data-category="realizari" style="opacity: 0.5;">
-          <div class="news-thumb">🏆</div>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Realizări</span>
-              <span>În curând</span>
-            </div>
-            <h3>Premiile și realizările vor fi sărbătorite aici</h3>
-            <p>Pe măsură ce membrii noștri câștigă premii la conferințe, le vom prezenta aici.</p>
-          </div>
-        </article>
-
-        <article class="news-card" data-category="behind-the-scenes" style="opacity: 0.5;">
-          <div class="news-thumb">🎬</div>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Behind the Scenes</span>
-              <span>În curând</span>
-            </div>
-            <h3>Povești din culisele clubului</h3>
-            <p>Pregătiri, repetiții, momente amuzante, prietenii, tot ce nu se vede din afară.</p>
-          </div>
-        </article>
-
+      <div class="news-grid" id="news-list">
+        <p class="text-center" style="color: var(--gray); grid-column: 1 / -1;">Se încarcă articolele…</p>
       </div>
 
-      <p class="text-center mt-3" style="color: var(--gray); font-style: italic;">
-        Articolele marcate cu opacitate redusă sunt placeholder-uri, vor fi înlocuite de Department of Press pe măsură ce publică conținut real.
+      <p class="text-center mt-3" id="news-empty" style="color: var(--gray); font-style: italic; display:none;">
+        Niciun articol publicat încă. Department of Press va adăuga conținut în Studio-ul Sanity.
       </p>
 
     </div>
   </section>
+
+  <script src="sanity.js"></script>
+  <script>
+    (async function () {
+      const list = document.getElementById('news-list');
+      const empty = document.getElementById('news-empty');
+      try {
+        const articles = await MuncnmbSanity.getArticles();
+        if (!articles || !articles.length) {
+          list.innerHTML = '';
+          empty.style.display = '';
+          return;
+        }
+        list.innerHTML = articles.map(a => MuncnmbSanity.renderCard(a, 'ro', 'news/article.html')).join('');
+      } catch (err) {
+        console.error(err);
+        list.innerHTML = '<p class="text-center" style="color: var(--gray); grid-column: 1 / -1;">Eroare la încărcarea articolelor. Verifică conexiunea sau încearcă mai târziu.</p>';
+      }
+    })();
+  </script>
 
   <footer class="site-footer">
     <div class="container">

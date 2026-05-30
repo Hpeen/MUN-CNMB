@@ -109,40 +109,8 @@
         <h2>Latest News</h2>
         <a href="news.html" class="btn-text">Vezi toate →</a>
       </div>
-      <div class="news-grid">
-        <article class="news-card">
-          <a href="news/bine-ati-venit.html" class="news-thumb">📢</a>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Anunțuri</span>
-              <span>16 mai 2026</span>
-            </div>
-            <h3><a href="news/bine-ati-venit.html">Bine ați venit pe site-ul oficial MUN: CNMB</a></h3>
-            <p>Lansăm oficial site-ul clubului, un spațiu unde vei găsi tot ce ține de activitățile, echipa și conferințele MUN: CNMB.</p>
-          </div>
-        </article>
-        <article class="news-card">
-          <div class="news-thumb">🌍</div>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Anunțuri</span>
-              <span>În curând</span>
-            </div>
-            <h3><a href="news.html">Următoarele evenimente vor fi anunțate aici</a></h3>
-            <p>Urmărește-ne pentru anunțuri despre workshopuri, training-uri și conferințe.</p>
-          </div>
-        </article>
-        <article class="news-card">
-          <div class="news-thumb">🤝</div>
-          <div class="news-body">
-            <div class="news-meta">
-              <span class="news-category">Comunitate</span>
-              <span>În curând</span>
-            </div>
-            <h3><a href="news.html">Povești din culisele MUN: CNMB</a></h3>
-            <p>Echipa Press va publica regulat povești și behind-the-scenes din viața clubului.</p>
-          </div>
-        </article>
+      <div class="news-grid" id="home-news-list">
+        <p class="text-center" style="color: var(--gray); grid-column: 1 / -1;">Se încarcă…</p>
       </div>
     </div>
   </section>
@@ -261,5 +229,23 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="sanity.js"></script>
+  <script>
+    (async function () {
+      const list = document.getElementById('home-news-list');
+      if (!list) return;
+      try {
+        const articles = (await MuncnmbSanity.getArticles()).slice(0, 3);
+        if (!articles.length) {
+          list.innerHTML = '<p class="text-center" style="color: var(--gray); grid-column: 1 / -1;">Niciun articol publicat încă.</p>';
+          return;
+        }
+        list.innerHTML = articles.map(a => MuncnmbSanity.renderCard(a, 'ro', 'news/article.html')).join('');
+      } catch (err) {
+        console.error(err);
+        list.innerHTML = '';
+      }
+    })();
+  </script>
 </body>
 </html>
