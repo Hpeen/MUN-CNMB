@@ -70,7 +70,42 @@ export default {
       title: '🇷🇴 Conținut (RO)',
       type: 'array',
       of: [
-        { type: 'block' },
+        {
+          type: 'block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'Titlu mare (H2)', value: 'h2' },
+            { title: 'Titlu mic (H3)', value: 'h3' },
+            { title: 'Citat', value: 'blockquote' },
+          ],
+          lists: [
+            { title: 'Listă cu puncte', value: 'bullet' },
+            { title: 'Listă numerotată', value: 'number' },
+          ],
+          marks: {
+            decorators: [
+              { title: 'Bold', value: 'strong' },
+              { title: 'Italic', value: 'em' },
+              { title: 'Subliniat', value: 'underline' },
+            ],
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: '🔗 Link',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'URL (https://... sau mailto:...)',
+                    validation: (Rule) =>
+                      Rule.uri({ allowRelative: false, scheme: ['http', 'https', 'mailto', 'tel'] }),
+                  },
+                ],
+              },
+            ],
+          },
+        },
         { type: 'image', options: { hotspot: true } },
       ],
     },
@@ -105,7 +140,42 @@ export default {
       title: '🇬🇧 Body (EN)',
       type: 'array',
       of: [
-        { type: 'block' },
+        {
+          type: 'block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'Titlu mare (H2)', value: 'h2' },
+            { title: 'Titlu mic (H3)', value: 'h3' },
+            { title: 'Citat', value: 'blockquote' },
+          ],
+          lists: [
+            { title: 'Listă cu puncte', value: 'bullet' },
+            { title: 'Listă numerotată', value: 'number' },
+          ],
+          marks: {
+            decorators: [
+              { title: 'Bold', value: 'strong' },
+              { title: 'Italic', value: 'em' },
+              { title: 'Subliniat', value: 'underline' },
+            ],
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: '🔗 Link',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'URL (https://... sau mailto:...)',
+                    validation: (Rule) =>
+                      Rule.uri({ allowRelative: false, scheme: ['http', 'https', 'mailto', 'tel'] }),
+                  },
+                ],
+              },
+            ],
+          },
+        },
         { type: 'image', options: { hotspot: true } },
       ],
     },

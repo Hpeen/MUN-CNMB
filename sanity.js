@@ -164,7 +164,7 @@
     const readMore = lang === 'en' ? 'Read more →' : 'Citește mai mult →';
 
     const imgSrc = article.imageUrl
-      ? buildImageUrl(article.imageUrl, { w: 800, h: 450, fit: 'crop', hotspot: article.imageHotspot })
+      ? buildImageUrl(article.imageUrl, { w: 900, fit: 'max' })
       : '';
     const thumb = imgSrc
       ? `<a href="${url}" class="news-thumb news-thumb--image" aria-label="${escapeHtml(title)}"><img src="${imgSrc}" alt="" loading="lazy"></a>`
