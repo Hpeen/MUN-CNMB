@@ -26,6 +26,7 @@
   const ARTICLES_QUERY = `*[_type == "article"] | order(publishedAt desc) {
     _id, category, publishedAt, emoji,
     "imageUrl": coverImage.asset->url,
+    "imageHotspot": coverImage.hotspot,
     title_ro, "slug_ro": slug_ro.current, excerpt_ro,
     title_en, "slug_en": slug_en.current, excerpt_en
   }`;
@@ -38,9 +39,27 @@
     const slugField = lang === 'en' ? 'slug_en' : 'slug_ro';
     const groq = `*[_type == "article" && ${slugField}.current == $slug][0]{
       ...,
-      "imageUrl": coverImage.asset->url
+      "imageUrl": coverImage.asset->url,
+      "imageHotspot": coverImage.hotspot
     }`;
     return query(groq, { slug });
+  }
+
+  // ---- Image URL builder (respects hotspot for nice cropping) ----
+  function buildImageUrl(baseUrl, opts) {
+    if (!baseUrl) return '';
+    const params = [];
+    if (opts.w) params.push('w=' + opts.w);
+    if (opts.h) params.push('h=' + opts.h);
+    if (opts.fit) params.push('fit=' + opts.fit);
+    if (opts.hotspot && opts.fit === 'crop') {
+      params.push('crop=focalpoint');
+      params.push('fp-x=' + opts.hotspot.x);
+      params.push('fp-y=' + opts.hotspot.y);
+    }
+    params.push('auto=format');
+    params.push('q=85');
+    return baseUrl + '?' + params.join('&');
   }
 
   // ---- Formatters ----
@@ -84,17 +103,33 @@
       if (block._type === 'image' && block.asset) {
         if (listOpen) { html += `</${listOpen}>`; listOpen = null; }
         const url = block.asset._ref ? imageUrlFromRef(block.asset._ref) : (block.asset.url || '');
-        if (url) html += `<img src="${url}" alt="" loading="lazy" class="article-img">`;
+        if (url) html += `<img src="${url}?w=1200&auto=format&q=85" alt="" loading="lazy" class="article-img">`;
         continue;
       }
       if (block._type !== 'block') continue;
 
+      // Build lookup table for markDefs (links, etc.)
+      const markDefs = {};
+      (block.markDefs || []).forEach(def => { markDefs[def._key] = def; });
+
       const inner = (block.children || []).map(c => {
         let t = escapeHtml(c.text);
         const marks = c.marks || [];
+        // Decorator marks (strong, em, underline)
         if (marks.includes('strong')) t = `<strong>${t}</strong>`;
         if (marks.includes('em')) t = `<em>${t}</em>`;
         if (marks.includes('underline')) t = `<u>${t}</u>`;
+        if (marks.includes('code')) t = `<code>${t}</code>`;
+        // Link marks (annotation marks reference markDefs)
+        for (const m of marks) {
+          const def = markDefs[m];
+          if (def && def._type === 'link' && def.href) {
+            const safeHref = escapeHtml(def.href);
+            const external = /^https?:\/\//i.test(def.href);
+            const target = external ? ' target="_blank" rel="noopener"' : '';
+            t = `<a href="${safeHref}"${target}>${t}</a>`;
+          }
+        }
         return t;
       }).join('');
 
@@ -128,8 +163,11 @@
     const url = `${articleBase}?slug=${encodeURIComponent(slug)}`;
     const readMore = lang === 'en' ? 'Read more →' : 'Citește mai mult →';
 
-    const thumb = article.imageUrl
-      ? `<a href="${url}" class="news-thumb news-thumb--image" aria-label="${escapeHtml(title)}"><img src="${article.imageUrl}?w=800&h=450&fit=crop&auto=format" alt="" loading="lazy"></a>`
+    const imgSrc = article.imageUrl
+      ? buildImageUrl(article.imageUrl, { w: 800, h: 450, fit: 'crop', hotspot: article.imageHotspot })
+      : '';
+    const thumb = imgSrc
+      ? `<a href="${url}" class="news-thumb news-thumb--image" aria-label="${escapeHtml(title)}"><img src="${imgSrc}" alt="" loading="lazy"></a>`
       : `<a href="${url}" class="news-thumb" aria-label="${escapeHtml(title)}">${escapeHtml(article.emoji || '📰')}</a>`;
 
     return `
@@ -155,6 +193,7 @@
     renderCard,
     renderPortableText,
     formatDate,
+    buildImageUrl,
     CATEGORY_LABELS,
     escapeHtml,
   };

@@ -101,8 +101,9 @@
 
         const cat = MuncnmbSanity.CATEGORY_LABELS.en[article.category] || article.category;
         const date = MuncnmbSanity.formatDate(article.publishedAt, 'en');
+        const coverParams = { w: 1400, h: 788, fit: 'crop', hotspot: article.imageHotspot };
         const cover = article.imageUrl
-          ? `<img src="${article.imageUrl}?w=1200" alt="" class="article-cover-img">`
+          ? `<img src="${MuncnmbSanity.buildImageUrl(article.imageUrl, coverParams)}" alt="" class="article-cover-img">`
           : `<div class="article-cover" style="font-size:4rem;text-align:center;line-height:1;">${MuncnmbSanity.escapeHtml(article.emoji || '📰')}</div>`;
         const body = MuncnmbSanity.renderPortableText(article.body_en);
 
