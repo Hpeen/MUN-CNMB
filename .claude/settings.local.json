@@ -4,7 +4,8 @@
       "Bash(python *)",
       "Bash(git *)",
       "Bash(gh run *)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(npm --version)"
     ]
   }
 }
