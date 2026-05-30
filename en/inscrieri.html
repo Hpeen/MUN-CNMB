@@ -43,118 +43,16 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-header"><h2>Open applications</h2></div>
-
-      <div class="grid-2">
-        <div class="activity-card">
-          <div class="activity-icon">🎓</div>
-          <span class="activity-deadline">📅 Deadline: TBD</span>
-          <h3>Membership 2026</h3>
-          <p>Become an active member of MUN: CNMB. Participate in workshops, conferences, and club life, the first Model UN club in Vâlcea county.</p>
-          <a href="#form-membership" class="btn btn-primary">Apply now →</a>
-        </div>
-
-        <div class="activity-card" style="background: var(--light); border-style: dashed;">
-          <div class="activity-icon" style="background: rgba(0,0,0,0.05); color: var(--gray-light);">⏳</div>
-          <h3 style="color: var(--gray);">Upcoming events</h3>
-          <p>Future conferences, workshops, and activities will be announced here. Follow us on Instagram for real-time notifications.</p>
-          <a href="https://www.instagram.com/muncnmb.vl/" target="_blank" rel="noopener" class="btn btn-outline-blue">Go to Instagram</a>
-        </div>
+  <!-- COMING SOON -->
+  <section class="section section-light">
+    <div class="container-narrow text-center">
+      <div style="font-size:3rem; margin-bottom:1.5rem;">⏳</div>
+      <h2>Applications opening soon</h2>
+      <p>The Membership 2026 application form will be available soon via Google Forms. Follow us on Instagram to be the first to know when applications open.</p>
+      <div class="cta-group" style="justify-content:center; margin-top:2rem;">
+        <a href="https://www.instagram.com/muncnmb.vl/" target="_blank" rel="noopener" class="btn btn-primary">Follow on Instagram</a>
+        <a href="mailto:muncnmb.contact@gmail.com" class="btn btn-outline-blue">Contact us</a>
       </div>
-    </div>
-  </section>
-
-  <section id="form-membership" class="section section-light">
-    <div class="container">
-      <div class="section-header">
-        <h2>Membership 2026 Form</h2>
-        <p>Fill out the form below. We'll contact you by email within 7 days.</p>
-      </div>
-
-      <form class="form" data-form="Membership 2026" action="#" method="POST"
-            data-success="Thank you! Your application has been received. We'll contact you within 7 days."
-            data-error="An error occurred. Please try again or write directly to president@muncnmb.com."
-            data-success-mailto="Your email app should open with the application details. If it doesn't, copy the data and send it to president@muncnmb.com.">
-
-        <div class="form-status" role="status" aria-live="polite"></div>
-
-        <div class="form-group">
-          <label class="form-label" for="nume">Full name <span class="required">*</span></label>
-          <input class="form-input" type="text" id="nume" name="full_name" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="email">Email <span class="required">*</span></label>
-          <input class="form-input" type="email" id="email" name="email" required>
-          <p class="form-hint">We'll use this email for all communication with you.</p>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="telefon">Phone</label>
-          <input class="form-input" type="tel" id="telefon" name="phone">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="clasa">Class & profile <span class="required">*</span></label>
-          <input class="form-input" type="text" id="clasa" name="class_profile" placeholder="e.g. 11 Mathematics-CS" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="motivatie">Why do you want to join MUN: CNMB? <span class="required">*</span></label>
-          <textarea class="form-textarea" id="motivatie" name="motivation" rows="4" maxlength="500" required></textarea>
-          <p class="form-hint">Maximum 500 characters.</p>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="experienta">Previous MUN experience</label>
-          <textarea class="form-textarea" id="experienta" name="experience" rows="3" placeholder="Conferences attended, debate clubs, etc. (optional)"></textarea>
-        </div>
-
-        <div class="form-group">
-          <span class="form-label">Languages spoken</span>
-          <div class="form-checkbox-group">
-            <label class="form-check"><input type="checkbox" name="languages" value="Romanian" checked> Romanian</label>
-            <label class="form-check"><input type="checkbox" name="languages" value="English"> English</label>
-            <label class="form-check"><input type="checkbox" name="languages" value="French"> French</label>
-            <label class="form-check"><input type="checkbox" name="languages" value="German"> German</label>
-            <label class="form-check"><input type="checkbox" name="languages" value="Other"> Other</label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <span class="form-label">Weekly availability <span class="required">*</span></span>
-          <div class="form-radio-group">
-            <label class="form-check"><input type="radio" name="availability" value="2-3 hours/week" required> 2-3 hours per week</label>
-            <label class="form-check"><input type="radio" name="availability" value="4-6 hours/week"> 4-6 hours per week</label>
-            <label class="form-check"><input type="radio" name="availability" value="7+ hours/week"> 7+ hours per week</label>
-          </div>
-        </div>
-
-        <div class="form-divider"></div>
-
-        <div class="form-group">
-          <label class="form-check">
-            <input type="checkbox" name="gdpr" value="yes" required>
-            <span><span class="required">*</span> I agree to the processing of my personal data according to the <a href="privacy.html" target="_blank">Privacy Policy</a>.</span>
-          </label>
-        </div>
-
-        <div class="form-group">
-          <label class="form-check">
-            <input type="checkbox" name="parental_consent" value="yes">
-            <span>I am a minor under 16 and I have my parent/legal guardian's consent for this application.</span>
-          </label>
-          <p class="form-hint">Check only if you're under 16. We'll also contact the parent before officially enrolling you.</p>
-        </div>
-
-        <button type="submit" class="btn btn-primary form-submit"
-                data-label="Submit application"
-                data-sending="Sending…">
-          Submit application
-        </button>
-      </form>
     </div>
   </section>
 

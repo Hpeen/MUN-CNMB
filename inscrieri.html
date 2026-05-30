@@ -43,128 +43,16 @@
     </div>
   </section>
 
-  <!-- ACTIVITĂȚI DESCHISE -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Activități deschise pentru înscriere</h2>
+  <!-- COMING SOON -->
+  <section class="section section-light">
+    <div class="container-narrow text-center">
+      <div style="font-size:3rem; margin-bottom:1.5rem;">⏳</div>
+      <h2>Înscrierile se deschid în curând</h2>
+      <p>Formularul de înscriere pentru Membership 2026 va fi disponibil în curând prin Google Forms. Urmărește-ne pe Instagram pentru a fi primul care află când se deschid.</p>
+      <div class="cta-group" style="justify-content:center; margin-top:2rem;">
+        <a href="https://www.instagram.com/muncnmb.vl/" target="_blank" rel="noopener" class="btn btn-primary">Urmărește pe Instagram</a>
+        <a href="mailto:muncnmb.contact@gmail.com" class="btn btn-outline-blue">Contactează-ne</a>
       </div>
-
-      <div class="grid-2">
-        <div class="activity-card">
-          <div class="activity-icon">🎓</div>
-          <span class="activity-deadline">📅 Deadline: A se completa</span>
-          <h3>Membership 2026</h3>
-          <p>Devino membru activ al MUN: CNMB. Participă la workshopuri, conferințe și viața clubului, primul club Model UN din județul Vâlcea.</p>
-          <a href="#form-membership" class="btn btn-primary">Aplică acum →</a>
-        </div>
-
-        <div class="activity-card" style="background: var(--light); border-style: dashed;">
-          <div class="activity-icon" style="background: rgba(0,0,0,0.05); color: var(--gray-light);">⏳</div>
-          <h3 style="color: var(--gray);">Următoarele evenimente</h3>
-          <p>Conferințe, workshopuri și activități viitoare vor fi anunțate aici. Urmărește-ne pe Instagram pentru notificări în timp real.</p>
-          <a href="https://www.instagram.com/muncnmb.vl/" target="_blank" rel="noopener" class="btn btn-outline-blue">Mergi pe Instagram</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORMULAR MEMBERSHIP -->
-  <section id="form-membership" class="section section-light">
-    <div class="container">
-      <div class="section-header">
-        <h2>Formular Membership 2026</h2>
-        <p>Completează formularul de mai jos. Te contactăm prin email în maxim 7 zile.</p>
-      </div>
-
-      <!-- Setup Formspree:
-           1. Creează cont gratuit la formspree.io (folosește president@muncnmb.com)
-           2. Creează un Form nou și copiază ID-ul (ex. xrgvznpd)
-           3. Înlocuiește action="#" cu action="https://formspree.io/f/YOUR_FORM_ID"
-           Până atunci, submit-ul deschide aplicația de email cu datele pre-populate (fallback). -->
-
-      <form class="form" data-form="Membership 2026" action="#" method="POST"
-            data-success="Mulțumim! Aplicația ta a fost primită. Te vom contacta în maxim 7 zile."
-            data-error="A apărut o eroare. Te rugăm să încerci din nou sau să ne scrii direct la president@muncnmb.com."
-            data-success-mailto="Se deschide aplicația ta de email pentru trimiterea aplicației. Dacă nu se deschide, copiază datele și trimite-le la president@muncnmb.com.">
-
-        <div class="form-status" role="status" aria-live="polite"></div>
-
-        <div class="form-group">
-          <label class="form-label" for="nume">Nume complet <span class="required">*</span></label>
-          <input class="form-input" type="text" id="nume" name="nume" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="email">Email <span class="required">*</span></label>
-          <input class="form-input" type="email" id="email" name="email" required>
-          <p class="form-hint">Vom folosi acest email pentru toată comunicarea cu tine.</p>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="telefon">Telefon</label>
-          <input class="form-input" type="tel" id="telefon" name="telefon">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="clasa">Clasa și profilul <span class="required">*</span></label>
-          <input class="form-input" type="text" id="clasa" name="clasa" placeholder="ex. 11 Mate-Info" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="motivatie">De ce vrei să te alături MUN: CNMB? <span class="required">*</span></label>
-          <textarea class="form-textarea" id="motivatie" name="motivatie" rows="4" maxlength="500" required></textarea>
-          <p class="form-hint">Maxim 500 caractere.</p>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="experienta">Experiență MUN anterioară</label>
-          <textarea class="form-textarea" id="experienta" name="experienta" rows="3" placeholder="Conferințe la care ai participat, cluburi de dezbatere, etc. (opțional)"></textarea>
-        </div>
-
-        <div class="form-group">
-          <span class="form-label">Limbi vorbite</span>
-          <div class="form-checkbox-group">
-            <label class="form-check"><input type="checkbox" name="limbi" value="Romana" checked> Română</label>
-            <label class="form-check"><input type="checkbox" name="limbi" value="Engleza"> Engleză</label>
-            <label class="form-check"><input type="checkbox" name="limbi" value="Franceza"> Franceză</label>
-            <label class="form-check"><input type="checkbox" name="limbi" value="Germana"> Germană</label>
-            <label class="form-check"><input type="checkbox" name="limbi" value="Alta"> Alta</label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <span class="form-label">Disponibilitate săptămânală <span class="required">*</span></span>
-          <div class="form-radio-group">
-            <label class="form-check"><input type="radio" name="disponibilitate" value="2-3 ore/saptamana" required> 2-3 ore pe săptămână</label>
-            <label class="form-check"><input type="radio" name="disponibilitate" value="4-6 ore/saptamana"> 4-6 ore pe săptămână</label>
-            <label class="form-check"><input type="radio" name="disponibilitate" value="7+ ore/saptamana"> 7+ ore pe săptămână</label>
-          </div>
-        </div>
-
-        <div class="form-divider"></div>
-
-        <div class="form-group">
-          <label class="form-check">
-            <input type="checkbox" name="gdpr" value="da" required>
-            <span><span class="required">*</span> Sunt de acord cu prelucrarea datelor mele personale conform <a href="privacy.html" target="_blank">Politicii de Confidențialitate</a>.</span>
-          </label>
-        </div>
-
-        <div class="form-group">
-          <label class="form-check">
-            <input type="checkbox" name="acord_parental" value="da">
-            <span>Sunt minor sub 16 ani și am acordul părintelui/tutorelui legal pentru această aplicație.</span>
-          </label>
-          <p class="form-hint">Bifează doar dacă ai sub 16 ani. Vom contacta și părintele înainte de a te înrola oficial.</p>
-        </div>
-
-        <button type="submit" class="btn btn-primary form-submit"
-                data-label="Trimite aplicația"
-                data-sending="Se trimite…">
-          Trimite aplicația
-        </button>
-      </form>
     </div>
   </section>
 
