@@ -108,18 +108,13 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .logo-mark {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: var(--un-blue);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: -0.5px;
+  background: var(--un-blue-darker) url('MUN-CNMBlogo.svg') center/cover no-repeat;
+  font-size: 0;
+  color: transparent;
+  flex-shrink: 0;
 }
 
 .logo-text { line-height: 1.1; }
@@ -295,14 +290,39 @@ img { max-width: 100%; height: auto; display: block; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('assets/images/hero-bg.jpg') center/cover;
-  opacity: 0.3;
+  background: linear-gradient(to bottom, rgba(0,47,108,0.55) 0%, rgba(0,68,153,0.25) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
   z-index: 0;
+  animation: heroFade 16s ease-in-out infinite, heroKenBurns 16s ease-out infinite;
+}
+
+.hero-slide:nth-child(2) {
+  animation-delay: 8s;
+}
+
+@keyframes heroFade {
+  0%,   5%  { opacity: 0; }
+  15%,  45% { opacity: 0.38; }
+  55%, 100% { opacity: 0; }
+}
+
+@keyframes heroKenBurns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.07); }
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 900px;
 }
 
