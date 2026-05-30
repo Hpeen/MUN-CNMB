@@ -1,4 +1,4 @@
-// MUN: CNMB — global site interactions
+﻿// MUN: CNMB - global site interactions
 (function () {
   'use strict';
 

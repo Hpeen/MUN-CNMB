@@ -1,5 +1,5 @@
-/* ============================================
-   MUN: CNMB — Global Stylesheet
+﻿/* ============================================
+   MUN: CNMB - Global Stylesheet
    ============================================ */
 
 :root {
@@ -812,7 +812,7 @@ img { max-width: 100%; height: auto; display: block; }
 .empty-state .icon { font-size: 4rem; margin-bottom: 1rem; opacity: 0.4; }
 
 /* ============================================
-   ABOUT PAGE — Values / Objectives / Committees
+   ABOUT PAGE - Values / Objectives / Committees
    ============================================ */
 
 .value-list {
