@@ -306,17 +306,27 @@ img { max-width: 100%; height: auto; display: block; }
   background-position: center;
   opacity: 0;
   z-index: 0;
-  animation: heroFade 16s ease-in-out infinite, heroKenBurns 16s ease-out infinite;
+}
+
+.hero-slide:nth-child(1) {
+  animation: heroFade1 16s ease-in-out infinite, heroKenBurns 16s ease-out infinite;
 }
 
 .hero-slide:nth-child(2) {
+  animation: heroFade2 16s ease-in-out infinite, heroKenBurns 16s ease-out infinite;
   animation-delay: 8s;
 }
 
-@keyframes heroFade {
-  0%,   5%  { opacity: 0; }
-  15%,  45% { opacity: 0.38; }
-  55%, 100% { opacity: 0; }
+@keyframes heroFade1 {
+  0%,  40%  { opacity: 0.38; }
+  52%, 90%  { opacity: 0; }
+  100%      { opacity: 0.38; }
+}
+
+@keyframes heroFade2 {
+  0%        { opacity: 0; }
+  8%,  40%  { opacity: 0.38; }
+  52%, 100% { opacity: 0; }
 }
 
 @keyframes heroKenBurns {
