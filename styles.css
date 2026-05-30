@@ -111,10 +111,14 @@ img { max-width: 100%; height: auto; display: block; }
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--un-blue-darker) url('MUN-CNMBlogo.svg') center/cover no-repeat;
+  background: var(--un-blue-darker) url('assets/logo.png') center/cover no-repeat;
   font-size: 0;
   color: transparent;
   flex-shrink: 0;
+}
+
+.footer-brand .logo-mark {
+  background: rgba(255,255,255,0.18) url('assets/logo.png') center/cover no-repeat;
 }
 
 .logo-text { line-height: 1.1; }
