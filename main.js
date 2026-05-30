@@ -105,6 +105,18 @@
     });
   });
 
+  // ---------- Page transitions ----------
+  document.querySelectorAll('a[href]').forEach(function (link) {
+    var href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || link.target === '_blank') return;
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var dest = link.href;
+      document.body.classList.add('page-exit');
+      setTimeout(function () { window.location.href = dest; }, 250);
+    });
+  });
+
   // ---------- Active nav link highlighting ----------
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-main a').forEach(function (link) {

@@ -66,7 +66,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 .section { padding: 5rem 0; }
 .section-sm { padding: 3rem 0; }
-.section-light { background: var(--light); }
+.section-light {
+  background: linear-gradient(to bottom, var(--white) 0%, var(--light) 3rem, var(--light) calc(100% - 3rem), var(--white) 100%);
+}
 .section-blue { background: var(--un-blue); color: var(--white); }
 .section-blue h1, .section-blue h2, .section-blue h3 { color: var(--white); }
 
@@ -111,20 +113,19 @@ img { max-width: 100%; height: auto; display: block; }
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: var(--un-blue-darker);
-  letter-spacing: 0.02em;
+  background: #ffffff url('assets/MUN-CNMBlogo.svg') center/32px 32px no-repeat;
+  font-size: 0;
+  color: transparent;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .footer-brand .logo-mark {
-  background: rgba(255,255,255,0.18);
-  color: #fff;
+  background-color: rgba(255,255,255,0.18);
+  background-image: url('assets/MUN-CNMBlogo.svg');
+  background-position: center;
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
 }
 
 .logo-text { line-height: 1.1; }
@@ -1095,6 +1096,24 @@ img { max-width: 100%; height: auto; display: block; }
 
   .doc-item { flex-direction: column; align-items: flex-start; }
   .doc-actions { width: 100%; }
+}
+
+/* ---- Page transitions ---- */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: pageFadeIn 0.35s ease both;
+}
+
+body.page-exit {
+  animation: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
 }
 
 /* ============================================
