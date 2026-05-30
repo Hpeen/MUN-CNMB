@@ -69,7 +69,10 @@ img { max-width: 100%; height: auto; display: block; }
 .section-light {
   background: linear-gradient(to bottom, var(--white) 0%, var(--light) 3rem, var(--light) calc(100% - 3rem), var(--white) 100%);
 }
-.section-blue { background: var(--un-blue); color: var(--white); }
+.section-blue {
+  background: linear-gradient(to bottom, var(--white) 0%, var(--un-blue) 3rem, var(--un-blue) calc(100% - 3rem), var(--white) 100%);
+  color: var(--white);
+}
 .section-blue h1, .section-blue h2, .section-blue h3 { color: var(--white); }
 
 .text-center { text-align: center; }
@@ -1098,23 +1101,13 @@ img { max-width: 100%; height: auto; display: block; }
   .doc-actions { width: 100%; }
 }
 
-/* ---- Page transitions ---- */
+/* ---- Page transition (very subtle fade-in only) ---- */
 @keyframes pageFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-body {
-  animation: pageFadeIn 0.35s ease both;
-}
-
-body.page-exit {
-  animation: none;
-  opacity: 0;
-  transform: translateY(-6px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  pointer-events: none;
-}
+body { animation: pageFadeIn 0.25s ease both; }
 
 /* ============================================
    ACCESSIBILITY
