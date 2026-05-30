@@ -23,6 +23,7 @@
 html[data-theme="dark"] {
   --un-blue: #60A5FA;
   --un-blue-dark: #3B82F6;
+  --un-blue-darker: #93C5FD;
   --white: #111827;
   --light: #1E2535;
   --dark: #F1F5F9;
@@ -47,6 +48,32 @@ html[data-theme="dark"] h4,
 html[data-theme="dark"] h5,
 html[data-theme="dark"] h6 {
   color: #F1F5F9;
+}
+
+html[data-theme="dark"] .site-header {
+  background: #111827;
+  border-bottom-color: #2D3748;
+}
+
+html[data-theme="dark"] .logo { color: #60A5FA; }
+html[data-theme="dark"] .logo-text small { color: #94A3B8; }
+
+html[data-theme="dark"] .nav-main a { color: #F1F5F9; }
+html[data-theme="dark"] .nav-main a:hover,
+html[data-theme="dark"] .nav-main a.active { color: #60A5FA; }
+html[data-theme="dark"] .nav-main a.active::after { background: #60A5FA; }
+
+html[data-theme="dark"] .lang-switch a { color: #94A3B8; }
+html[data-theme="dark"] .lang-switch a.active { color: #60A5FA; }
+html[data-theme="dark"] .lang-switch span { color: #2D3748; }
+
+html[data-theme="dark"] .nav-toggle,
+html[data-theme="dark"] .theme-toggle { color: #F1F5F9; }
+html[data-theme="dark"] .theme-toggle:hover { background: #1E2535; }
+
+html[data-theme="dark"] .nav-main {
+  background: #111827;
+  border-top-color: #2D3748;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
