@@ -1004,41 +1004,6 @@ img { max-width: 100%; height: auto; display: block; }
    COOKIE BANNER
    ============================================ */
 
-.cookie-banner {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
-  max-width: 720px;
-  margin: 0 auto;
-  background: var(--dark);
-  color: var(--white);
-  padding: 1.125rem 1.5rem;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  z-index: 999;
-  box-shadow: var(--shadow-lg);
-  font-size: 0.9375rem;
-}
-
-.cookie-banner.hidden { display: none; }
-.cookie-banner a { color: var(--accent); }
-.cookie-banner button {
-  background: var(--un-blue);
-  color: var(--white);
-  border: none;
-  padding: 0.625rem 1.25rem;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.9375rem;
-  flex-shrink: 0;
-}
-.cookie-banner button:hover { background: var(--un-blue-dark); }
 
 /* ============================================
    BREADCRUMB
@@ -1092,7 +1057,6 @@ img { max-width: 100%; height: auto; display: block; }
 
   .section-header-split { flex-direction: column; align-items: flex-start; }
 
-  .cookie-banner { flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 600px) {

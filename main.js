@@ -51,18 +51,6 @@
     });
   }
 
-  // ---------- Cookie banner ----------
-  const cookieBanner = document.querySelector('.cookie-banner');
-  const cookieAccept = document.querySelector('.cookie-banner .accept-btn');
-  if (cookieBanner && cookieAccept) {
-    if (localStorage.getItem('cookiesAccepted') === 'true') {
-      cookieBanner.classList.add('hidden');
-    }
-    cookieAccept.addEventListener('click', function () {
-      cookieBanner.classList.add('hidden');
-      localStorage.setItem('cookiesAccepted', 'true');
-    });
-  }
 
   // ---------- Form: handle submit (Formspree-ready, mailto fallback) ----------
   document.querySelectorAll('form[data-form]').forEach(function (form) {
