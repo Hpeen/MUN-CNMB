@@ -20,6 +20,18 @@
   --max-width-text: 800px;
 }
 
+[data-theme="dark"] {
+  --white: #0F1117;
+  --light: #1A1F2E;
+  --dark: #E2E8F0;
+  --gray: #94A3B8;
+  --gray-light: #4A5568;
+  --border: #2D3748;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.40);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.50);
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -113,7 +125,7 @@ img { max-width: 100%; height: auto; display: block; }
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,6 +192,25 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 1.5rem;
   color: var(--dark);
 }
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.375rem;
+  color: var(--dark);
+  border-radius: 6px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover { background: var(--light); }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 /* ============================================
    ANNOUNCEMENT BAR
