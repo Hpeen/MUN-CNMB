@@ -81,7 +81,7 @@ html[data-theme="dark"] .nav-main {
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--dark);
@@ -91,7 +91,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--dark);
@@ -160,7 +160,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  font-family: 'DM Serif Display', serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   color: var(--un-blue-darker);
@@ -190,7 +190,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .logo-text { line-height: 1.1; }
-.logo-text small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 400; color: var(--gray); }
+.logo-text small { display: block; font-family: Arial, Helvetica, sans-serif; font-size: 0.7rem; font-weight: 400; color: var(--gray); }
 
 .nav-main {
   display: flex;
@@ -294,7 +294,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .btn {
   display: inline-block;
   padding: 0.875rem 1.75rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
   border-radius: 4px;
@@ -395,25 +395,13 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   z-index: 0;
 }
 
-.hero-slide:nth-child(1) {
-  animation: heroFade1 16s ease-in-out infinite, heroKenBurns 16s ease-out infinite;
+.hero-slide {
+  transition: opacity 1.5s ease-in-out;
 }
 
-.hero-slide:nth-child(2) {
-  animation: heroFade2 16s ease-in-out infinite, heroKenBurns 16s ease-out infinite;
-  animation-delay: 8s;
-}
-
-@keyframes heroFade1 {
-  0%,  40%  { opacity: 0.38; }
-  52%, 90%  { opacity: 0; }
-  100%      { opacity: 0.38; }
-}
-
-@keyframes heroFade2 {
-  0%        { opacity: 0; }
-  8%,  40%  { opacity: 0.38; }
-  52%, 100% { opacity: 0; }
+.hero-slide.active {
+  opacity: 0.38;
+  animation: heroKenBurns 8s ease-out forwards;
 }
 
 @keyframes heroKenBurns {
@@ -428,7 +416,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 }
 
 .hero h1 { color: var(--white); margin-bottom: 1rem; }
-.hero .subtitle { font-size: 1.25rem; opacity: 0.95; margin-bottom: 2.5rem; font-family: 'DM Sans', sans-serif; font-weight: 400; }
+.hero .subtitle { font-size: 1.25rem; opacity: 0.95; margin-bottom: 2.5rem; font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
 .hero .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 .hero-sm {
@@ -533,7 +521,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 }
 
 .stat-number {
-  font-family: 'DM Serif Display', serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1;
@@ -615,7 +603,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   justify-content: center;
   color: var(--white);
   font-size: 2.5rem;
-  font-family: 'DM Serif Display', serif;
+  font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
   position: relative;
 }
@@ -1083,7 +1071,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
 }
@@ -1103,7 +1091,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 .committee-card .acronym {
   display: block;
-  font-family: 'DM Serif Display', serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 1.375rem;
   color: var(--un-blue);
@@ -1160,7 +1148,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 .footer-col h6 {
   color: var(--white);
-  font-family: 'DM Sans', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1179,7 +1167,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 .footer-brand .footer-tagline {
   font-style: italic;
-  font-family: 'DM Serif Display', serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.0625rem;
   margin: 0.75rem 0 0.5rem;
   color: var(--accent);

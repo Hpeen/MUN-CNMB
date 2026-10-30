@@ -25,6 +25,20 @@
     });
   }
 
+  // ---------- Hero slideshow ----------
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length) {
+    let current = 0;
+    slides[0].classList.add('active');
+    if (slides.length > 1) {
+      setInterval(function () {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 6000);
+    }
+  }
+
   // ---------- Accordion ----------
   document.querySelectorAll('.accordion-trigger').forEach(function (trigger) {
     trigger.addEventListener('click', function () {
